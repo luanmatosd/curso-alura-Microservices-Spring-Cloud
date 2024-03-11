@@ -22,6 +22,6 @@ public class CompraController {
 
 		// Método com o objetivo de processar a compra
 		// Ao chamar um POST, eu também chamo um GET na busca do endereço do Fornecedor
-		CompraService.realizaCompra(compra);
+		compraService.realizaCompra(compra);
 	}
 }

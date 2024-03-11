@@ -1,5 +1,6 @@
 package br.com.alura.microservice.loja.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,16 +14,16 @@ import br.com.alura.microservice.loja.controller.dto.InfoFornecedorDTO;
 @Service
 public class CompraService {
 
+	@Autowired
+	private RestTemplate client;
+
 	// Integração entre a Loja e o Fornecedor
 	// Loja está fazendo uma requisição para outro Micro serviço, o do Fornecedor
 	// Loja está buscando informações de endereço do fornecedor
-	public static void realizaCompra(CompraDTO compra) {
-
-		// Criando uma instância do RestTemplate
-		RestTemplate client = new RestTemplate();
+	public void realizaCompra(CompraDTO compra) {
 
 		// Definindo a URL de destino para a requisição
-		String url = "http://localhost:8081/info/" + compra.getEndereco().getEstado();
+		String url = "http://fornecedor/info/" + compra.getEndereco().getEstado();
 
 		// Fazendo uma requisição HTTP GET para a URL especificada
 		ResponseEntity<InfoFornecedorDTO> exchange = client.exchange(url, // URL de destino

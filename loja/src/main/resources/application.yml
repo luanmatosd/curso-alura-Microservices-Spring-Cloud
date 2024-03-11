@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: 'loja'
+
+
+# Eureka configuration
+# Indicando que essa aplicação precisa se registrar nesse Servidor Eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      

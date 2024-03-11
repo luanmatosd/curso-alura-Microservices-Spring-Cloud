@@ -1,7 +1,10 @@
+# Eureka configuration
+# Indicando que essa aplicação não precisa se registrar num Servidor Eureka, pois, é ele mesmo
 eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
-    
+
+# Server configuration
 server:
   port: 8761

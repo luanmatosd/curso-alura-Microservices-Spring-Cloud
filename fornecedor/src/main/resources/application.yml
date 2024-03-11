@@ -1,4 +1,7 @@
 spring:
+  application:
+    name: 'fornecedor'
+  
   datasource: 
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/fornecedor
@@ -7,6 +10,16 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update 
-      
+
+# Server configuration
 server:
   port: 8081
+  
+# Eureka configuration
+# Indicando que essa aplicação precisa se registrar nesse Servidor Eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

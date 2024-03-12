@@ -1,5 +1,5 @@
 # Eureka configuration
-# Indicando que essa aplicação não precisa se registrar num Servidor Eureka, pois, é ele mesmo
+# Indicando que essa aplicação não precisa se registrar num Servidor Eureka, pois, é ela mesmo
 eureka:
   client:
     fetch-registry: false

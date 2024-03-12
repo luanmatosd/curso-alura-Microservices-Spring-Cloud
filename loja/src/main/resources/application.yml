@@ -1,7 +1,7 @@
+# Spring configuration
 spring:
   application:
     name: 'loja'
-
 
 # Eureka configuration
 # Indicando que essa aplicação precisa se registrar nesse Servidor Eureka

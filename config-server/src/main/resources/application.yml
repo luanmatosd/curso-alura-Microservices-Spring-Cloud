@@ -1,0 +1,16 @@
+# Spring configuration
+# O microservice-repo é o arquivo .yml que contém os dados de acesso ao banco de dados, JPA e Hibernate
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: C:/WorkspaceSTS/microservice-repo
+
+# Server configuration
+server:
+  port: 8888
+  
+  

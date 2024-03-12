@@ -1,0 +1,12 @@
+# Config Server Configuration
+
+# Indicando que essa aplicação precisa acessar esse Config Server
+# Foi usado o bootstrap, pois, antes de acessar meu banco de dados, eu preciso ter ciências de quais são os dados de acesso
+spring:
+  application:
+    name: 'fornecedor'
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: http://localhost:8888
